@@ -1,2 +1,3 @@
 - x create a HTML and run in a live server
-- make a git respository and push
+- x make a git respository and push
+- .. css file
