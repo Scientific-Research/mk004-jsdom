@@ -2,4 +2,5 @@
 - x make a git respository and push
 - x css file
 - x create javascript file with console.log() test
-- .. change text on page with javascript
+- x change text on page with javascript
+- .. create a button that changes text on the screen
