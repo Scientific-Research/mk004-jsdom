@@ -1,3 +1,4 @@
 - x create a HTML and run in a live server
 - x make a git respository and push
-- .. css file
+- x css file
+- x create javascript file with console.log() test
