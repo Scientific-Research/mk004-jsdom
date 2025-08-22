@@ -3,4 +3,9 @@
 - x css file
 - x create javascript file with console.log() test
 - x change text on page with javascript
-- .. create a button that changes text on the screen
+- x create a button that changes text on the screen
+    - x create event Handler in JS
+
+- .. use innerHTML
+- .. attach click event in onClick
+- .. implement onkeydown 
