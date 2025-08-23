@@ -42,12 +42,24 @@ btnElem.addEventListener('click', () => {
 // keydown
 // inputElem.addEventListener('keyup', () => {
 // inputElem.addEventListener('keydown', () => {
-inputElem.addEventListener('keyup', () => {
-  console.log('test');
-  if (inputElem.value !== '') {
+// inputElem.addEventListener('keyup', () => {
+//   console.log('test');
+//   if (inputElem.value !== '') {
+//     messageElem.innerText = inputElem.value;
+//   } else {
+//     messageElem.innerText = 'Initial Text';
+//   }
+// });
+// inputElem.value = '';
+
+// do the same but mit ENTER key:
+inputElem.addEventListener('keypress', (e) => {
+  if (inputElem.value !== '' && e.keyCode === 13) {
     messageElem.innerText = inputElem.value;
-  } else {
-    messageElem.innerText = 'Initial Text';
+    inputElem.value = '';
   }
+
+  // else {
+  //   messageElem.innerText = 'Initial Text';
+  // }
 });
-inputElem.value = '';
