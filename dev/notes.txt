@@ -7,8 +7,8 @@
     - x create event Handler in JS
 
 - x use innerHTML
-- .. attach click event in onClick
-- .. implement onkeydown 
+- x attach click event in onClick
+- .. implement onkeydown: let user enter text, this text will be used to change message!
 
 - change the app from a test app to a Flashcard app
 - publish at Netlify
