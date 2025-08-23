@@ -4,3 +4,8 @@ body {
   font-family: sans-serif;
   padding: 0 1rem;
 }
+
+input {
+  display: block;
+  margin: 10px 0;
+}
