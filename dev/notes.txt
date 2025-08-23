@@ -6,6 +6,10 @@
 - x create a button that changes text on the screen
     - x create event Handler in JS
 
-- .. use innerHTML
+- x use innerHTML
 - .. attach click event in onClick
 - .. implement onkeydown 
+
+- change the app from a test app to a Flashcard app
+- publish at Netlify
+- test on Smartphone
