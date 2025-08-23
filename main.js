@@ -19,6 +19,12 @@ messageElem.innerText = 'Initial Text';
 //   messageElem.innerText = 'The Button was clicked!!!!!';
 // };
 
+// Allgemeine Function für beide addEventListeners()
+const changeTheText = () => {
+  messageElem.innerText = inputElem.value;
+  inputElem.value = '';
+};
+
 // implement onkeydown
 btnElem.addEventListener('click', () => {
   // messageElem.innerText = 'The button was clicked!';
@@ -26,7 +32,9 @@ btnElem.addEventListener('click', () => {
   // console.log(inputElem);
   console.log(inputElem.value);
   if (inputElem.value !== '') {
-    messageElem.innerText = inputElem.value;
+    // messageElem.innerText = inputElem.value;
+    // inputElem.value = '';
+    changeTheText();
   }
 
   // else {
@@ -36,7 +44,6 @@ btnElem.addEventListener('click', () => {
   // if (inputElem.value === '') {
   //   messageElem.innerText = 'Initial Text';
   // }
-  inputElem.value = '';
 });
 
 // keydown
@@ -55,8 +62,9 @@ btnElem.addEventListener('click', () => {
 // do the same but mit ENTER key:
 inputElem.addEventListener('keypress', (e) => {
   if (inputElem.value !== '' && e.keyCode === 13) {
-    messageElem.innerText = inputElem.value;
-    inputElem.value = '';
+    // messageElem.innerText = inputElem.value;
+    // inputElem.value = '';
+    changeTheText();
   }
 
   // else {
