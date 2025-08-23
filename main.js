@@ -3,7 +3,7 @@ const btnElem = document.querySelector('.btn');
 const inputElem = document.querySelector('.userText');
 
 messageElem.innerText = 'Initial Text';
-
+inputElem.focus();
 // Event mit addEventListener
 // btnElem.addEventListener('click', () => {
 //   messageElem.innerText = 'The button was clicked!';
@@ -23,6 +23,7 @@ messageElem.innerText = 'Initial Text';
 const changeTheText = () => {
   messageElem.innerText = inputElem.value;
   inputElem.value = '';
+  inputElem.focus();
 };
 
 // implement onkeydown
