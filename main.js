@@ -10,6 +10,10 @@ messageElem.innerText = 'Initial Text';
 // });
 
 // Event mit Onclick()
-const test = () => {
+// const test = () => {
+//   messageElem.innerText = 'The Button was clicked!!!!!';
+// };
+
+const changeText = () => {
   messageElem.innerText = 'The Button was clicked!!!!!';
 };
