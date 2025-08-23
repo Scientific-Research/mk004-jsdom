@@ -38,3 +38,16 @@ btnElem.addEventListener('click', () => {
   // }
   inputElem.value = '';
 });
+
+// keydown
+// inputElem.addEventListener('keyup', () => {
+// inputElem.addEventListener('keydown', () => {
+inputElem.addEventListener('keyup', () => {
+  console.log('test');
+  if (inputElem.value !== '') {
+    messageElem.innerText = inputElem.value;
+  } else {
+    messageElem.innerText = 'Initial Text';
+  }
+});
+inputElem.value = '';
