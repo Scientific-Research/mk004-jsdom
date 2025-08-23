@@ -3,7 +3,13 @@ const btnElem = document.querySelector('.btn');
 
 messageElem.innerText = 'Initial Text';
 
-btnElem.addEventListener('click', () => {
-  messageElem.innerText = 'The button was clicked!';
-  // messageElem.innerHTML = 'the <b>button</b> was clicked!';
-});
+// Event mit addEventListener
+// btnElem.addEventListener('click', () => {
+//   messageElem.innerText = 'The button was clicked!';
+//   // messageElem.innerHTML = 'the <b>button</b> was clicked!';
+// });
+
+// Event mit Onclick()
+const test = () => {
+  messageElem.innerText = 'The Button was clicked!!!!!';
+};
