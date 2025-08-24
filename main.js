@@ -5,73 +5,52 @@ const btnElem2 = document.querySelector('.btn2');
 const inputElem1 = document.querySelector('.userText1');
 const inputElem2 = document.querySelector('.userText2');
 
-// messageElem1.innerText = 'Initial Text';
 inputElem1.focus();
-// Event mit addEventListener
-// btnElem.addEventListener('click', () => {
-//   messageElem.innerText = 'The button was clicked!';
-//   // messageElem.innerHTML = 'the <b>button</b> was clicked!';
-// });
 
-// Event mit Onclick()
-// const test = () => {
-//   messageElem.innerText = 'The Button was clicked!!!!!';
-// };
+// General Function
+const changeTheText = (messageElem, inputElem) => {
+  messageElem.innerText = inputElem.value;
+  inputElem.value = '';
 
-// const changeText = () => {
-//   messageElem.innerText = 'The Button was clicked!!!!!';
-// };
-
-// Allgemeine Function für beide addEventListeners()
-const changeTheText = () => {
-  messageElem1.innerText = inputElem1.value;
-  // messageElem.innerText = inputElem2.value;
-  inputElem1.value = '';
-  inputElem1.focus();
+  if (inputElem === inputElem1) {
+    inputElem2.focus();
+  } else {
+    inputElem1.focus();
+  }
 };
+
+// const changeTheText = () => {
+//   messageElem1.innerText = inputElem1.value;
+//   inputElem1.value = '';
+//   inputElem2.focus();
+// };
 
 // implement onkeydown
 btnElem1.addEventListener('click', () => {
-  // messageElem.innerText = 'The button was clicked!';
-  // messageElem.innerHTML = 'the <b>button</b> was clicked!';
   console.log(inputElem1);
   if (inputElem1.value !== '') {
-    // messageElem.innerText = inputElem.value;
-    // inputElem.value = '';
-    changeTheText();
+    changeTheText(messageElem1, inputElem1);
   }
-
-  // else {
-  //   return;
-  // }
-
-  // if (inputElem.value === '') {
-  //   messageElem.innerText = 'Initial Text';
-  // }
 });
-
-// keydown
-// inputElem.addEventListener('keyup', () => {
-// inputElem.addEventListener('keydown', () => {
-// inputElem.addEventListener('keyup', () => {
-//   console.log('test');
-//   if (inputElem.value !== '') {
-//     messageElem.innerText = inputElem.value;
-//   } else {
-//     messageElem.innerText = 'Initial Text';
-//   }
-// });
-// inputElem.value = '';
 
 // do the same but mit ENTER key:
 inputElem1.addEventListener('keypress', (e) => {
   if (inputElem1.value !== '' && e.keyCode === 13) {
-    // messageElem.innerText = inputElem.value;
-    // inputElem.value = '';
-    changeTheText();
+    changeTheText(messageElem1, inputElem1);
   }
+});
 
-  // else {
-  //   messageElem.innerText = 'Initial Text';
-  // }
+// implement onkeydown
+btnElem2.addEventListener('click', () => {
+  console.log(inputElem2);
+  if (inputElem2.value !== '') {
+    changeTheText(messageElem2, inputElem2);
+  }
+});
+
+// do the same but mit ENTER key:
+inputElem2.addEventListener('keypress', (e) => {
+  if (inputElem2.value !== '' && e.keyCode === 13) {
+    changeTheText(messageElem2, inputElem2);
+  }
 });
