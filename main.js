@@ -4,6 +4,8 @@ const btnElem1 = document.querySelector('.btn1');
 const btnElem2 = document.querySelector('.btn2');
 const inputElem1 = document.querySelector('.userText1');
 const inputElem2 = document.querySelector('.userText2');
+const btnToggleElem = document.querySelector('.btnToggle');
+const hiddenElem = document.querySelector('.hidden');
 
 inputElem1.focus();
 inputElem1.value = '';
@@ -55,4 +57,9 @@ inputElem2.addEventListener('keypress', (e) => {
   if (inputElem2.value !== '' && e.keyCode === 13) {
     changeTheText(messageElem2, inputElem2);
   }
+});
+
+// Toggle Button
+btnToggleElem.addEventListener('click', () => {
+  hiddenElem.style.display = 'block';
 });
