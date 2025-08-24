@@ -6,6 +6,8 @@ const inputElem1 = document.querySelector('.userText1');
 const inputElem2 = document.querySelector('.userText2');
 
 inputElem1.focus();
+inputElem1.value = '';
+inputElem2.value = '';
 
 // General Function
 const changeTheText = (messageElem, inputElem) => {
