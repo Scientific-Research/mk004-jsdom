@@ -6,6 +6,7 @@ const inputElem1 = document.querySelector('.userText1');
 const inputElem2 = document.querySelector('.userText2');
 const btnToggleElem = document.querySelector('.btnToggle');
 const hiddenElem = document.querySelector('.hidden');
+const scoresContentElem = document.querySelector('.scoresContent');
 
 const scores = [
   {
@@ -88,3 +89,16 @@ inputElem2.addEventListener('keypress', (e) => {
 btnToggleElem.addEventListener('click', () => {
   hiddenElem.classList.toggle('hidden');
 });
+
+// SCORES
+scoresContentElem.innerHTML = 'kkk';
+// scores.forEach((s) => {
+//   (scoresContentElem.innerHTML = s.user),
+//     (scoresContentElem.innerHTML = s.score);
+// });
+
+scoresContentElem.innerHTML = scores
+  .map((s) => {
+    return `<div style = "margin : 1rem 0">${s.user} -> ${s.score}</div>`;
+  })
+  .join(' ');
