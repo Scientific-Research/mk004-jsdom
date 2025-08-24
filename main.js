@@ -1,10 +1,11 @@
-const messageElem = document.querySelector('.message');
+const messageElem1 = document.querySelector('.message1');
+const messageElem2 = document.querySelector('.message2');
 const btnElem1 = document.querySelector('.btn1');
 const btnElem2 = document.querySelector('.btn2');
 const inputElem1 = document.querySelector('.userText1');
 const inputElem2 = document.querySelector('.userText2');
 
-messageElem.innerText = 'Initial Text';
+// messageElem1.innerText = 'Initial Text';
 inputElem1.focus();
 // Event mit addEventListener
 // btnElem.addEventListener('click', () => {
@@ -23,7 +24,7 @@ inputElem1.focus();
 
 // Allgemeine Function für beide addEventListeners()
 const changeTheText = () => {
-  messageElem.innerText = inputElem1.value;
+  messageElem1.innerText = inputElem1.value;
   // messageElem.innerText = inputElem2.value;
   inputElem1.value = '';
   inputElem1.focus();
