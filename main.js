@@ -7,6 +7,21 @@ const inputElem2 = document.querySelector('.userText2');
 const btnToggleElem = document.querySelector('.btnToggle');
 const hiddenElem = document.querySelector('.hidden');
 
+const scores = [
+  {
+    user: 'EJT',
+    score: '01842',
+  },
+  {
+    user: 'PPB',
+    score: '01812',
+  },
+  {
+    user: 'EJT',
+    score: '01442',
+  },
+];
+
 inputElem1.focus();
 inputElem1.value = '';
 inputElem2.value = '';

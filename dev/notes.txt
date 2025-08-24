@@ -12,5 +12,12 @@
 - x rows below each other
 
 - x add Flashcard section
-- .. publish at Netlify
-- test on Smartphone
+- x publish at Netlify
+- x test on Smartphone
+
+- x create scores array
+- .. display scores array
+    - display with string templates
+    - display with createElement
+
+- convert to modules
