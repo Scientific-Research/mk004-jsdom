@@ -9,9 +9,8 @@
 - x use innerHTML
 - x attach click event in onClick
 - x implement onkeydown: let user enter text, this text will be used to change message!
-
 - x rows below each other
 
-- .. change the app from a test app to a Flashcard app
+- .. add Flashcard section
 - publish at Netlify
 - test on Smartphone

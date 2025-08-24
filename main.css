@@ -8,3 +8,11 @@ body {
 .row {
   margin: 1rem 0;
 }
+
+.hidden {
+  display: none;
+}
+
+hr {
+  margin-top: 1rem;
+}
