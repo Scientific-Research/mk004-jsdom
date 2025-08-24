@@ -59,10 +59,17 @@ inputElem2.addEventListener('keypress', (e) => {
   }
 });
 
-hiddenElem.style.display = 'none';
 // Toggle Button using Ternary Operator
+// First Solution => OK
+// hiddenElem.style.display = 'none';
+// btnToggleElem.addEventListener('click', () => {
+//   // hiddenElem.style.display = 'block';
+//   hiddenElem.style.display =
+//     hiddenElem.style.display === 'none' ? 'block' : 'none';
+// });
+
+// Toggle Button using classList.toggle()
+// Second Solution => OK
 btnToggleElem.addEventListener('click', () => {
-  // hiddenElem.style.display = 'block';
-  hiddenElem.style.display =
-    hiddenElem.style.display === 'none' ? 'block' : 'none';
+  hiddenElem.classList.toggle('hidden');
 });
