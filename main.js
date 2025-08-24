@@ -59,7 +59,10 @@ inputElem2.addEventListener('keypress', (e) => {
   }
 });
 
-// Toggle Button
+hiddenElem.style.display = 'none';
+// Toggle Button using Ternary Operator
 btnToggleElem.addEventListener('click', () => {
-  hiddenElem.style.display = 'block';
+  // hiddenElem.style.display = 'block';
+  hiddenElem.style.display =
+    hiddenElem.style.display === 'none' ? 'block' : 'none';
 });
