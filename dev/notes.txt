@@ -11,6 +11,6 @@
 - x implement onkeydown: let user enter text, this text will be used to change message!
 - x rows below each other
 
-- .. add Flashcard section
-- publish at Netlify
+- x add Flashcard section
+- .. publish at Netlify
 - test on Smartphone
