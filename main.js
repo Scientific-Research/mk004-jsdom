@@ -1,9 +1,11 @@
 const messageElem = document.querySelector('.message');
-const btnElem = document.querySelector('.btn');
-const inputElem = document.querySelector('.userText');
+const btnElem1 = document.querySelector('.btn1');
+const btnElem2 = document.querySelector('.btn2');
+const inputElem1 = document.querySelector('.userText1');
+const inputElem2 = document.querySelector('.userText2');
 
 messageElem.innerText = 'Initial Text';
-inputElem.focus();
+inputElem1.focus();
 // Event mit addEventListener
 // btnElem.addEventListener('click', () => {
 //   messageElem.innerText = 'The button was clicked!';
@@ -21,18 +23,18 @@ inputElem.focus();
 
 // Allgemeine Function für beide addEventListeners()
 const changeTheText = () => {
-  messageElem.innerText = inputElem.value;
-  inputElem.value = '';
-  inputElem.focus();
+  messageElem.innerText = inputElem1.value;
+  // messageElem.innerText = inputElem2.value;
+  inputElem1.value = '';
+  inputElem1.focus();
 };
 
 // implement onkeydown
-btnElem.addEventListener('click', () => {
+btnElem1.addEventListener('click', () => {
   // messageElem.innerText = 'The button was clicked!';
   // messageElem.innerHTML = 'the <b>button</b> was clicked!';
-  // console.log(inputElem);
-  console.log(inputElem.value);
-  if (inputElem.value !== '') {
+  console.log(inputElem1);
+  if (inputElem1.value !== '') {
     // messageElem.innerText = inputElem.value;
     // inputElem.value = '';
     changeTheText();
@@ -61,8 +63,8 @@ btnElem.addEventListener('click', () => {
 // inputElem.value = '';
 
 // do the same but mit ENTER key:
-inputElem.addEventListener('keypress', (e) => {
-  if (inputElem.value !== '' && e.keyCode === 13) {
+inputElem1.addEventListener('keypress', (e) => {
+  if (inputElem1.value !== '' && e.keyCode === 13) {
     // messageElem.innerText = inputElem.value;
     // inputElem.value = '';
     changeTheText();
