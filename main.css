@@ -5,6 +5,6 @@ body {
   padding: 0 1rem;
 }
 
-input {
-  margin: 5px 0;
+.row {
+  margin: 1rem 0;
 }
