@@ -25,7 +25,8 @@ const scoresContentElem = document.querySelector('.scoresContent');
 
 // IIFE => Intermediate Invoked Function Execution => fetch the data from Server
 (async () => {
-  const response = await fetch('http://localhost:5000/scores');
+  // const response = await fetch('http://localhost:5000/scores');
+  const response = await fetch('https://mk-testapi.chat24hr.com/scores');
   const _scores = await response.json();
   console.log(_scores);
 
