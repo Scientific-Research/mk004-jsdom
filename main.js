@@ -23,6 +23,13 @@ const scoreItems = [
   },
 ];
 
+// IIFE => Intermediate Invoked Function Execution => fetch the data from Server
+(async () => {
+  const response = await fetch('http://localhost:5000/scores');
+  const _scores = await response.json();
+  console.log(_scores);
+})();
+
 inputElem1.focus();
 inputElem1.value = '';
 inputElem2.value = '';
