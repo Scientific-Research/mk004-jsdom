@@ -105,9 +105,23 @@ scoresContentElem.innerHTML = 'kkk';
 //   .join(' ');
 
 // Second Solution using main.css => external Style => very clean
+// scoresContentElem.innerHTML = scoreItems
+//   .map((s) => {
+//     return `<div class="score"> <span>${s.user}</span> <span>${s.score}</span>
+//   </div>`;
+//   })
+//   .join(' ');
+
+// Third Solution using Table
 scoresContentElem.innerHTML = scoreItems
   .map((s) => {
-    return `<div class="score"> <span>${s.user}</span> <span>${s.score}</span>
-  </div>`;
+    return `
+  <table class="score">
+    <tr>
+      <td class="user-td">${s.user}</td>
+      <td class="score-td">${s.score}</td>
+    </tr>
+  </table>
+  `;
   })
   .join(' ');
