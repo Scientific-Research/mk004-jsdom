@@ -8,26 +8,41 @@ const btnToggleElem = document.querySelector('.btnToggle');
 const hiddenElem = document.querySelector('.hidden');
 const scoresContentElem = document.querySelector('.scoresContent');
 
-const scoreItems = [
-  {
-    user: 'EJT',
-    score: '01842',
-  },
-  {
-    user: 'PPB',
-    score: '01812',
-  },
-  {
-    user: 'EJT',
-    score: '01442',
-  },
-];
+// const scoreItems = [
+//   {
+//     user: 'EJT',
+//     score: '01842',
+//   },
+//   {
+//     user: 'PPB',
+//     score: '01812',
+//   },
+//   {
+//     user: 'EJT',
+//     score: '01442',
+//   },
+// ];
 
 // IIFE => Intermediate Invoked Function Execution => fetch the data from Server
 (async () => {
   const response = await fetch('http://localhost:5000/scores');
   const _scores = await response.json();
   console.log(_scores);
+
+  // Third Solution using Table and display the result in HTML format using string LITERAL ``
+  // scoresContentElem.innerHTML = scoreItems
+  scoresContentElem.innerHTML = _scores
+    .map((s) => {
+      return `
+  <table class="score">
+    <tr>
+      <td class="user-td">${s.user}</td>
+      <td class="score-td">${s.score}</td>
+    </tr>
+  </table>
+  `;
+    })
+    .join(' ');
 })();
 
 inputElem1.focus();
@@ -119,16 +134,17 @@ scoresContentElem.innerHTML = 'kkk';
 //   })
 //   .join(' ');
 
-// Third Solution using Table
-scoresContentElem.innerHTML = scoreItems
-  .map((s) => {
-    return `
-  <table class="score">
-    <tr>
-      <td class="user-td">${s.user}</td>
-      <td class="score-td">${s.score}</td>
-    </tr>
-  </table>
-  `;
-  })
-  .join(' ');
+// // Third Solution using Table
+// // scoresContentElem.innerHTML = scoreItems
+// scoresContentElem.innerHTML = _scores
+//   .map((s) => {
+//     return `
+//   <table class="score">
+//     <tr>
+//       <td class="user-td">${s.user}</td>
+//       <td class="score-td">${s.score}</td>
+//     </tr>
+//   </table>
+//   `;
+//   })
+//   .join(' ');
