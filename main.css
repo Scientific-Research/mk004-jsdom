@@ -21,3 +21,15 @@ td {
   width: 50px;
   background-color: #222;
 }
+
+.score {
+  background-color: #222;
+  padding: 1rem;
+  width: 7rem;
+  margin: 0.5rem;
+  color: #fff;
+}
+
+span {
+  margin: 0.4rem;
+}

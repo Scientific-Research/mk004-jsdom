@@ -97,8 +97,17 @@ scoresContentElem.innerHTML = 'kkk';
 //     (scoresContentElem.innerHTML = s.score);
 // });
 
+// First Solution using inline Style
+// scoresContentElem.innerHTML = scoreItems
+//   .map((s) => {
+//     return `<div style = "margin : 1rem 0; background-color: #2b1527ff;width:110px; padding:1rem; color:#fff">${s.user} -> ${s.score}</div>`;
+//   })
+//   .join(' ');
+
+// Second Solution using main.css => external Style => very clean
 scoresContentElem.innerHTML = scoreItems
   .map((s) => {
-    return `<div style = "margin : 1rem 0; background-color: #2b1527ff;width:110px; padding:1rem">${s.user} -> ${s.score}</div>`;
+    return `<div class="score"> <span>${s.user}</span> <span>${s.score}</span>
+  </div>`;
   })
   .join(' ');
