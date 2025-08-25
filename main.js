@@ -8,7 +8,7 @@ const btnToggleElem = document.querySelector('.btnToggle');
 const hiddenElem = document.querySelector('.hidden');
 const scoresContentElem = document.querySelector('.scoresContent');
 
-const scores = [
+const scoreItems = [
   {
     user: 'EJT',
     score: '01842',
@@ -97,8 +97,8 @@ scoresContentElem.innerHTML = 'kkk';
 //     (scoresContentElem.innerHTML = s.score);
 // });
 
-scoresContentElem.innerHTML = scores
+scoresContentElem.innerHTML = scoreItems
   .map((s) => {
-    return `<div style = "margin : 1rem 0">${s.user} -> ${s.score}</div>`;
+    return `<div style = "margin : 1rem 0; background-color: #2b1527ff;width:110px; padding:1rem">${s.user} -> ${s.score}</div>`;
   })
   .join(' ');
